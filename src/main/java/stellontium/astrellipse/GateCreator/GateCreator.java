@@ -45,6 +45,10 @@ public class GateCreator implements CommandExecutor, Listener {
             }
             Player p = (Player) sender;
             U.addItem(p,gateC);
+            sender.sendMessage("手順");
+            sender.sendMessage("このアイテムを持って左クリックでテレポート先を指定");
+            sender.sendMessage("このアイテムを持って右クリックでゲート設置");
+            return true;
         }
         return true;
     }

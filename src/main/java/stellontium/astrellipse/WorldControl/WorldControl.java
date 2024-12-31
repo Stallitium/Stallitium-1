@@ -38,8 +38,9 @@ public class WorldControl implements CommandExecutor, Listener {
                 return true;
             }
             if (args.length == 0) {
-                sender.sendMessage("/worldc c <name> :");
-                sender.sendMessage("");
+                sender.sendMessage("/worldc c <name> : ワールド作成GUIが出ます");
+                sender.sendMessage("作りが雑なため簡単にエラーが出ます");
+                sender.sendMessage("↓クリックでテレポートコマンドが入力されます");
                 for (World wor : Bukkit.getWorlds()) {
                     TextComponent w = new net.md_5.bungee.api.chat.TextComponent(wor.getName());
                     w.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND,"/tp "+wor.getName()));
